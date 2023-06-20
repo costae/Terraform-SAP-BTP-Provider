@@ -1,8 +1,9 @@
 package main
 
 import (
-	"client"
 	"fmt"
+
+	"github.com/costae/Terraform-SAP-BTP-Provider/apiclient/client"
 )
 
 func main() {
@@ -15,7 +16,7 @@ func main() {
 	subaccountInfo := client.SubaccountInfo{
 		SubacccountID: "75407dce-c7e7-4d84-a0ef-b012865dd4b0",
 		Subdomain:     "27eadf16trial6",
-		DisplayName:   "trial6",
+		DisplayName:   "trial7",
 		Region:        "us10",
 	}
 	err := apiClient.Login(&subaccountInfo)
