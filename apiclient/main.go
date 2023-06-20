@@ -6,7 +6,7 @@ func main() {
 	apiClient := APIClient{
 		BaseURL:       "https://cpcli.cf.eu10.hana.ondemand.com", // Replace with your API base URL
 		Username:      "P2006255217",
-		Password:      "--------",
+		Password:      "-------",
 		GlobalAccount: "27eadf16trial-ga",
 	}
 	subaccountInfo := SubaccountInfo{

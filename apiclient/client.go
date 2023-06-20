@@ -109,7 +109,7 @@ func (c *APIClient) ListSubaccountCommand(s *SubaccountInfo) (string, error) {
 		return "", err
 	}
 
-	fmt.Println(string(responseBody))
+	// fmt.Println(string(responseBody))
 
 	return string(responseBody), nil
 }
@@ -164,10 +164,10 @@ func (c *APIClient) GetSubaccountCommand(s *SubaccountInfo) (*SubaccountInfo, er
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println("hey2")
-	fmt.Println(f)
-	fmt.Println(string(responseBody))
-	fmt.Println("Region:", f.Region)
+	// fmt.Println("hey2")
+	// fmt.Println(f)
+	// fmt.Println(string(responseBody))
+	// fmt.Println("Region:", f.Region)
 	return &f, nil
 }
 func (c *APIClient) CreateSubaccountCommand(s *SubaccountInfo) (*SubaccountInfo, error) {
@@ -223,7 +223,7 @@ func (c *APIClient) CreateSubaccountCommand(s *SubaccountInfo) (*SubaccountInfo,
 	}
 	// fmt.Println("hey2")
 	// fmt.Println(f)
-	fmt.Println(string(responseBody))
+	// fmt.Println(string(responseBody))
 	// fmt.Println("Region:", f.Region)
 	return &f, nil
 }
@@ -280,7 +280,7 @@ func (c *APIClient) UpdateSubaccountCommand(s *SubaccountInfo) (*SubaccountInfo,
 	}
 	// fmt.Println("hey2")
 	// fmt.Println(f)
-	fmt.Println(string(responseBody))
+	// fmt.Println(string(responseBody))
 	// fmt.Println("Region:", f.Region)
 	return &f, nil
 }
@@ -336,7 +336,7 @@ func (c *APIClient) DeleteSubaccountCommand(s *SubaccountInfo) (*SubaccountInfo,
 	}
 	// fmt.Println("hey2")
 	// fmt.Println(f)
-	fmt.Println(string(responseBody))
+	// fmt.Println(string(responseBody))
 	// fmt.Println("Region:", f.Region)
 	return &f, nil
 }
