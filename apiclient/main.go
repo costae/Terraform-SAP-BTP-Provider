@@ -1,21 +1,17 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/costae/Terraform-SAP-BTP-Provider/apiclient/client"
-)
+import "fmt"
 
 func main() {
-	apiClient := client.APIClient{
+	apiClient := APIClient{
 		BaseURL:       "https://cpcli.cf.eu10.hana.ondemand.com", // Replace with your API base URL
 		Username:      "P2006255217",
-		Password:      "Carlos123*",
+		Password:      "--------",
 		GlobalAccount: "27eadf16trial-ga",
 	}
-	subaccountInfo := client.SubaccountInfo{
-		SubacccountID: "75407dce-c7e7-4d84-a0ef-b012865dd4b0",
-		Subdomain:     "27eadf16trial6",
+	subaccountInfo := SubaccountInfo{
+		SubacccountID: "cb96c8bf-a5aa-46c4-9e7d-c488edaf7b26",
+		Subdomain:     "27eadf16trial7",
 		DisplayName:   "trial7",
 		Region:        "us10",
 	}
@@ -23,14 +19,14 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	respList1, err := apiClient.CreateSubaccountCommand(&subaccountInfo)
-	if err != nil {
-		fmt.Println(string(err.Error()))
-		panic(err)
-	}
-	if respList1 != nil {
-		subaccountInfo = *respList1
-	}
+	// respList1, err := apiClient.CreateSubaccountCommand(&subaccountInfo)
+	// if err != nil {
+	// 	fmt.Println(string(err.Error()))
+	// 	panic(err)
+	// }
+	// if respList1 != nil {
+	// 	subaccountInfo = *respList1
+	// }
 	respList, err := apiClient.GetSubaccountCommand(&subaccountInfo)
 	if err != nil {
 		fmt.Println(string(err.Error()))
