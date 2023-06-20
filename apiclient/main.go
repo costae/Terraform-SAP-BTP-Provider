@@ -29,7 +29,7 @@ func main() {
 		Subdomain: "27eadf16trial-ga",
 	}
 
-	err := apiClient.Login("P2006255217", "Carlos123*")
+	err := apiClient.Login("P2006255217", "pass")
 	if err != nil {
 		panic(err)
 	}
