@@ -9,7 +9,7 @@ import (
 )
 
 type SubaccountInfo struct {
-	SubacccountID     string `json:"guid"`
+	SubaccountID      string `json:"guid"`
 	TechnicalName     string `json:"technicalName"`
 	DisplayName       string `json:"displayName"`
 	GlobalAccountGUID string `json:"globalAccountGUID"`
@@ -39,6 +39,15 @@ type APIClient struct {
 	Password      string
 	GlobalAccount string
 	ReplacementRT string
+}
+
+func NewClient(BaseURL string, Username string, Password string, GlobalAccount string) *APIClient {
+	return &APIClient{
+		BaseURL:       BaseURL,
+		Username:      Username,
+		Password:      Password,
+		GlobalAccount: GlobalAccount,
+	}
 }
 
 func (c *APIClient) Login(s *SubaccountInfo) error {
@@ -119,7 +128,7 @@ func (c *APIClient) GetSubaccountCommand(s *SubaccountInfo) (*SubaccountInfo, er
 	commandBody := map[string]interface{}{
 		"paramValues": map[string]string{
 			"globalAccount": c.GlobalAccount,
-			"subaccount":    s.SubacccountID,
+			"subaccount":    s.SubaccountID,
 		},
 	}
 	commandJSON, _ := json.Marshal(commandBody)
@@ -232,7 +241,7 @@ func (c *APIClient) UpdateSubaccountCommand(s *SubaccountInfo) (*SubaccountInfo,
 	commandBody := map[string]interface{}{
 		"paramValues": map[string]string{
 			"displayName":   s.DisplayName,
-			"subaccount":    s.SubacccountID,
+			"subaccount":    s.SubaccountID,
 			"globalAccount": c.GlobalAccount,
 		},
 	}
@@ -289,7 +298,7 @@ func (c *APIClient) DeleteSubaccountCommand(s *SubaccountInfo) (*SubaccountInfo,
 	commandBody := map[string]interface{}{
 		"paramValues": map[string]string{
 			"globalAccount": c.GlobalAccount,
-			"subaccount":    s.SubacccountID,
+			"subaccount":    s.SubaccountID,
 		},
 	}
 	commandJSON, _ := json.Marshal(commandBody)

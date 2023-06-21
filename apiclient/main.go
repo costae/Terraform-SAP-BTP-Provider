@@ -10,10 +10,10 @@ func main() {
 		GlobalAccount: "27eadf16trial-ga",
 	}
 	subaccountInfo := SubaccountInfo{
-		SubacccountID: "cb96c8bf-a5aa-46c4-9e7d-c488edaf7b26",
-		Subdomain:     "27eadf16trial7",
-		DisplayName:   "trial7",
-		Region:        "us10",
+		SubaccountID: "cb96c8bf-a5aa-46c4-9e7d-c488edaf7b26",
+		Subdomain:    "27eadf16trial7",
+		DisplayName:  "trial7",
+		Region:       "us10",
 	}
 	err := apiClient.Login(&subaccountInfo)
 	if err != nil {
