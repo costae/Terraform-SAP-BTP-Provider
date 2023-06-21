@@ -123,7 +123,7 @@ func resourceCreateSubaccount(d *schema.ResourceData, m interface{}) error {
 }
 
 func resourceReadSubaccount(d *schema.ResourceData, m interface{}) error {
-	apiClient := m.(*client.Client)
+	apiClient := m.(*client.APIClient)
 
 	// itemId := d.Id()
 	item := client.SubaccountInfo{
@@ -153,7 +153,7 @@ func resourceReadSubaccount(d *schema.ResourceData, m interface{}) error {
 }
 
 func resourceUpdateSubaccount(d *schema.ResourceData, m interface{}) error {
-	apiClient := m.(*client.Client)
+	apiClient := m.(*client.APIClient)
 
 	// tfTags := d.Get("tags").(*schema.Set).List()
 	// tags := make([]string, len(tfTags))
@@ -193,7 +193,7 @@ func resourceUpdateSubaccount(d *schema.ResourceData, m interface{}) error {
 }
 
 func resourceDeleteSubaccount(d *schema.ResourceData, m interface{}) error {
-	apiClient := m.(*client.Client)
+	apiClient := m.(*client.APIClient)
 
 	// itemId := d.Id()
 	item := client.SubaccountInfo{
