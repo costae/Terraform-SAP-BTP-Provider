@@ -1,9 +1,9 @@
 package main
 
 import (
-	"provider"
+	provider "github.com/costae/Terraform-SAP-BTP-Provider/provider"
 
-	"github.com/hashicorp/terraform/plugin"
+	plugin "github.com/hashicorp/terraform-plugin-framework/providerserver"
 )
 
 func main() {

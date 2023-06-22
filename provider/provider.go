@@ -1,10 +1,9 @@
 package provider
 
 import (
-	client "apiclient"
+	client "github.com/costae/Terraform-SAP-BTP-Provider/apiclient"
 
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
 )
 
 func Provider() terraform.ResourceProvider {
