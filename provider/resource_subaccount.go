@@ -5,7 +5,9 @@ import (
 
 	client "github.com/costae/Terraform-SAP-BTP-Provider/apiclient"
 
-	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
 
 // func validateName(v interface{}, k string) (ws []string, es []error) {
